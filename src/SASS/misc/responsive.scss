@@ -1,0 +1,33 @@
+@media screen and (max-width: 760px){
+    .Carta{
+        &__Cabecera{
+            &__Titulo{
+                font-size: 2em;
+            }
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width: 500px){
+    .Carta{
+        &__Cabecera{
+            &__Titulo{
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 380px){
+    .Carta{
+        &__Cabecera{
+            &__Titulo{
+                font-size: 1em;
+            }
+        }
+    }
+}

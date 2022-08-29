@@ -1,38 +1,232 @@
-.App {
-  text-align: center;
-}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1em;
+  font-family: 'Asap';
+  scroll-behavior: smooth; }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@font-face {
+  font-family: "Asap";
+  src: url("./fonts/Asap-VariableFont_wght.ttf"); }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+html, body {
+  background-color: #000; }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+::-webkit-scrollbar {
+  width: 0; }
+
+.Header {
+  width: 100vw;
+  height: 5.5rem;
+  background-color: #000;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .Header__TituloPrincipal {
+    color: #ffe297;
+    font-size: medium;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 200; }
+  .Header__TituloSecundario {
+    color: #ffe297;
+    font-size: medium;
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: 200; }
+
+.Inicio {
+  background-color: antiquewhite;
+  background: url("./Imgs/FondoInicio.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: calc(100vh - 5.5rem);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .Inicio__Contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto; }
+    .Inicio__Contenedor__Imagen {
+      height: calc(100vh - 5.5rem);
+      max-height: 100vw;
+      max-width: 100vw; }
+
+.Carta {
+  height: auto;
+  width: 100%;
+  background: url("./Imgs/FondoCartaSevenSushi.png") no-repeat center center fixed;
+  display: flex;
+  flex-direction: column; }
+  .Carta__Cabecera {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #000000;
+    border-bottom: 0.1rem solid #ffe297;
+    min-height: 10vh; }
+    .Carta__Cabecera__Contenedor {
+      width: 10vw;
+      min-height: 10vh;
+      min-width: 10vh;
+      border-right: 0.1rem solid #ffe297; }
+      .Carta__Cabecera__Contenedor__Imagen {
+        width: 10vw;
+        min-height: 10vh;
+        min-width: 10vh; }
+    .Carta__Cabecera__Titulo {
+      width: calc(100% - 10vw - 0.2rem);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 10vw;
+      color: #ffe297;
+      font-size: 3em;
+      text-align: center; }
+
+.Carta__Contenedor {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  gap: 3rem;
+  flex-wrap: wrap; }
+  .Carta__Contenedor__Producto {
+    width: 10rem;
+    background-color: #000000bd;
+    height: 15.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 0rem -0.1rem 0.5rem 0.1rem #D6BE74;
+    overflow: hidden;
+    transition: 0.5s; }
+    .Carta__Contenedor__Producto:hover {
+      height: 25rem;
+      box-shadow: 0rem 0rem 0.7rem 0.2rem #D6BE74; }
+    .Carta__Contenedor__Producto__Contenedor {
+      border-bottom: 0.1rem solid #D6BE74;
+      width: 10rem;
+      height: 12rem; }
+      .Carta__Contenedor__Producto__Contenedor__Imagen {
+        width: 10rem; }
+    .Carta__Contenedor__Producto__Titulo {
+      color: #D6BE74;
+      text-align: center;
+      font-size: 1.4em;
+      font-weight: 100; }
+    .Carta__Contenedor__Producto__Precio {
+      color: #D6BE74;
+      text-align: center;
+      font-size: 1.4em;
+      font-weight: 100; }
+    .Carta__Contenedor__Producto__Encargar {
+      margin-bottom: 0.5rem;
+      background-color: black;
+      border: 0.1rem solid #D6BE74;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      width: 8rem;
+      height: 4rem;
+      border-radius: 2rem;
+      color: whitesmoke;
+      transition: 0.4s; }
+      .Carta__Contenedor__Producto__Encargar:hover {
+        background-color: rgba(255, 255, 255, 0.692);
+        color: black; }
+    .Carta__Contenedor__Producto__Parrafo {
+      text-align: justify;
+      width: 9rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.2rem;
+      color: white;
+      overflow-wrap: break-word; }
 
-.App-link {
-  color: #61dafb;
-}
+.Carta__Contenedor__Carrusel {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden; }
+  .Carta__Contenedor__Carrusel__Secciones {
+    width: 300%;
+    height: 45rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start; }
+    .Carta__Contenedor__Carrusel__Secciones__Titulo {
+      width: calc(100%/3);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+      font-size: 2em; }
+    .Carta__Contenedor__Carrusel__Secciones__ContenedorSecciones {
+      transition: 0.5s;
+      transform: translateX(0%);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start; }
+      .Carta__Contenedor__Carrusel__Secciones__ContenedorSecciones__Seccion {
+        width: calc(300% / 3 - 10%*3);
+        margin: 0% 5%;
+        height: 40rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+        background-color: rgba(0, 0, 0, 0.359);
+        border: 0.05rem solid #D6BE74;
+        border-radius: 2rem;
+        box-shadow: 0rem -0.1rem 0.5rem 0.1rem #D6BE74; }
+  .Carta__Contenedor__Carrusel__Navegacion {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .Carta__Contenedor__Carrusel__Navegacion__Punto {
+      background-color: aliceblue;
+      border-radius: 1rem;
+      height: 2rem;
+      width: 2rem;
+      margin: 0.5rem;
+      list-style: none; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.active {
+  background-color: #D6BE74; }
+
+@media screen and (max-width: 760px) {
+  .Carta__Cabecera__Titulo {
+    font-size: 2em; } }
+
+@media screen and (max-width: 500px) {
+  .Carta__Cabecera__Titulo {
+    font-size: 1.5em; } }
+
+@media screen and (max-width: 380px) {
+  .Carta__Cabecera__Titulo {
+    font-size: 1em; } }

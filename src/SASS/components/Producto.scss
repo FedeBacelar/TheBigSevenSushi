@@ -1,0 +1,78 @@
+.Carta{
+    &__Contenedor{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+        &__Producto{
+            width: 10rem;
+            background-color: #000000bd;
+            height: 15.25rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            border-radius: 1rem;
+            box-shadow: 0rem -0.1rem 0.5rem 0.1rem #D6BE74;
+            overflow: hidden;
+            transition: 0.5s;
+            &:hover{
+                height: 25rem;
+                box-shadow: 0rem 0rem 0.7rem 0.2rem #D6BE74;
+            }
+            &__Contenedor{
+                border-bottom: 0.1rem solid #D6BE74;
+                width: 10rem;
+                height: 12rem;
+                &__Imagen{
+                    width: 10rem;
+                }
+            }
+            &__Titulo{
+                color: #D6BE74;
+                text-align: center;
+                font-size: 1.4em;
+                font-weight: 100;
+            }
+            &__Precio{
+                color: #D6BE74;
+                text-align: center;
+                font-size: 1.4em;
+                font-weight: 100;
+            }
+            &__Encargar{
+                margin-bottom: 0.5rem;
+                background-color: black;
+                border: 0.1rem solid #D6BE74;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.5rem;
+                width: 8rem;
+                height: 4rem;
+                border-radius: 2rem;
+                color: whitesmoke;
+                transition: 0.4s;
+                &:hover{
+                    background-color: rgba(255, 255, 255, 0.692);
+                    color: black;
+                    
+                }
+            }
+            &__Parrafo{
+                text-align:justify;
+                width: 9rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0.2rem;
+                color: white;
+                overflow-wrap: break-word;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.Inicio{
+    background-color: antiquewhite;
+    background: url("./Imgs/FondoInicio.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: calc(100vh - 5.5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__Contenedor{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        &__Imagen{
+            height: calc(100vh - 5.5rem);
+            max-height: 100vw;
+            max-width: 100vw;
+                
+        }
+    }
+}

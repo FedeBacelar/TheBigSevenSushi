@@ -1,0 +1,38 @@
+.Carta{
+    height: auto;
+    width: 100%;
+    background: url("./Imgs/FondoCartaSevenSushi.png") no-repeat center center fixed;
+    display: flex;
+    flex-direction: column;
+    &__Cabecera{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #000000;
+        border-bottom: 0.1rem solid #ffe297;
+        min-height: 10vh;
+        &__Contenedor{
+            width: 10vw;
+            min-height: 10vh;
+            min-width: 10vh;
+            border-right: 0.1rem solid #ffe297;
+            &__Imagen{
+                width: 10vw;
+                min-height: 10vh;
+                min-width: 10vh;
+            }
+        }
+        &__Titulo{
+            width: calc(100% - 10vw - 0.2rem);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vw;
+            color: #ffe297;
+            font-size: 3em;
+            text-align: center;
+        }
+
+    }
+}
