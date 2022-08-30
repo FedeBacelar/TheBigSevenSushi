@@ -1,78 +1,63 @@
-.Carta{
-    &__Contenedor{
-        margin-top: 2rem;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 3rem;
-        flex-wrap: wrap;
-        &__Producto{
-            width: 10rem;
-            background-color: #000000bd;
-            height: 15.25rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-            border-radius: 1rem;
-            box-shadow: 0rem -0.1rem 0.5rem 0.1rem #D6BE74;
-            overflow: hidden;
-            transition: 0.5s;
-            &:hover{
-                height: 25rem;
-                box-shadow: 0rem 0rem 0.7rem 0.2rem #D6BE74;
-            }
-            &__Contenedor{
-                border-bottom: 0.1rem solid #D6BE74;
-                width: 10rem;
-                height: 12rem;
-                &__Imagen{
-                    width: 10rem;
-                }
-            }
-            &__Titulo{
-                color: #D6BE74;
-                text-align: center;
-                font-size: 1.4em;
-                font-weight: 100;
-            }
-            &__Precio{
-                color: #D6BE74;
-                text-align: center;
-                font-size: 1.4em;
-                font-weight: 100;
-            }
-            &__Encargar{
-                margin-bottom: 0.5rem;
-                background-color: black;
-                border: 0.1rem solid #D6BE74;
-                text-align: center;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 1.5rem;
-                width: 8rem;
-                height: 4rem;
-                border-radius: 2rem;
-                color: whitesmoke;
-                transition: 0.4s;
-                &:hover{
-                    background-color: rgba(255, 255, 255, 0.692);
-                    color: black;
-                    
-                }
-            }
-            &__Parrafo{
-                text-align:justify;
-                width: 9rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 0.2rem;
-                color: white;
-                overflow-wrap: break-word;
-            }
-        }
+.Producto{
+    width: 10rem;
+    height: 18rem;
+    background-color: rgba(0, 0, 0, 0.649);
+    border-radius: 2rem;
+    border: 0.1rem solid rgb(214,190,116);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: 0.3s;
+    &:hover{
+        height: 30rem;
     }
+    &__Contenedor{
+        width: 9.9rem;
+        height: 9.9rem;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-bottom: 0.1rem solid rgb(214,190,116);
+        &__Imagen{
+            width: 9.9rem;
+        }    
+    }
+    &__Titulo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(214,190,116);
+        font-size: 1.3em;
+        font-weight: 200;
+        margin: 1.5em 0.5rem 0.5rem 0.5rem;
+        height: 2em;
+        text-align: center;
+    }
+    &__Precio{
+        color: rgb(214,190,116);
+        font-size: 1.5em;
+        margin: 0.5em 0;
+        text-align: center;
+    }
+    &__Parrafo{
+        color: white;
+        margin: 1em;
+    }
+    &__Encargar{
+        color: white;
+        background-color: black;
+        border: 0.1rem solid rgb(214,190,116);
+        border-radius: 2rem;
+        text-align: center;
+        font-size: 1.5em;
+        width: 8rem;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    
+    
+    
 }

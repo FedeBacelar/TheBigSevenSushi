@@ -1,28 +1,18 @@
 import './App.css';
 import Carrusel from './components/Carrusel';
+import Producto from './components/Producto';
 
 function App() {
 
-  const eventMoverCarrusel = (Seccion) =>{
-    const divCarrusel = document.querySelector(".Carta__Contenedor__Carrusel__Secciones__ContenedorSecciones");
-    const Navegacion = document.querySelectorAll(".Carta__Contenedor__Carrusel__Navegacion__Punto");
-
-    Navegacion.forEach((Punto) =>{
-      Punto.style.backgroundColor = "aliceblue";
+  const MoverCarrusel = (Posicion) =>{
+    const Carrusel = document.querySelector(".Carta__Contenedor__Opciones__Carrusel")
+    const Control = document.querySelectorAll(".Carta__Contenedor__Opciones__ControlCarrusel__Punto")
+    Control.forEach(Punto => {
+      Punto.style.backgroundColor = 'white';
     })
-    if(Seccion === 'Seccion1'){
-      divCarrusel.style.transform = "translateX(0%)"
-      Navegacion[0].style.backgroundColor = "#D6BE74";
-      console.log('click 1')
-    } else if(Seccion === 'Seccion2'){
-      divCarrusel.style.transform = "translateX(-33.33%)"
-      Navegacion[1].style.backgroundColor = "#D6BE74";
-      console.log('click 2')
-    } else{
-      divCarrusel.style.transform = "translateX(-66.66%)"
-      Navegacion[2].style.backgroundColor = "#D6BE74";
-      console.log('click 3')
-    }
+    Control[Posicion].style.backgroundColor = 'black';
+    Carrusel.style.transform = `translateX(${Posicion*-33.33}%)`
+
   }
 
   return (
@@ -49,10 +39,56 @@ function App() {
           </div>
           <h1 className='Carta__Cabecera__Titulo'>CARTA DELIVERY {"&"} TAKEAWAY</h1>
         </article>
-        <div className='Carta__Contenedor'>
-          <Carrusel
-          MoverCarrusel={eventMoverCarrusel} />
-        </div>
+        <article className='Carta__Contenedor'>
+          <Producto
+          nombre={'NOMBRE'}
+          precio = {'PRECIO'}
+          descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+          <Producto
+          nombre={'NOMBRE'}
+          precio = {'PRECIO'}
+          descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+          <Producto
+          nombre={'NOMBRE'}
+          precio = {'PRECIO'}
+          descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+          <Producto
+          nombre={'NOMBRE'}
+          precio = {'PRECIO'}
+          descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+          <Producto
+          nombre={'NOMBRE'}
+          precio = {'PRECIO'}
+          descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+          <Producto
+          nombre={'NOMBRE'}
+          precio = {'PRECIO'}
+          descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+          <Producto
+          nombre={'NOMBRE'}
+          precio = {'PRECIO'}
+          descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+          <Producto
+          nombre={'NOMBRE'}
+          precio = {'PRECIO'}
+          descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+          <Producto
+          nombre={'NOMBRE'}
+          precio = {'PRECIO'}
+          descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+          <Producto
+          nombre={'NOMBRE'}
+          precio = {'PRECIO'}
+          descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+          <Producto
+          nombre={'NOMBRE'}
+          precio = {'PRECIO'}
+          descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+          <Producto
+          nombre={'NOMBRE'}
+          precio = {'PRECIO'}
+          descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+        </article>
       </section>
 
     </div>

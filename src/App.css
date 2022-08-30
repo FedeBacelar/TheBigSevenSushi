@@ -57,12 +57,13 @@ html, body {
       max-width: 100vw; }
 
 .Carta {
-  height: auto;
+  min-height: 100vh;
   width: 100%;
   background: url("./Imgs/FondoCartaSevenSushi.png") no-repeat center center fixed;
   display: flex;
   flex-direction: column; }
   .Carta__Cabecera {
+    margin-bottom: 2rem;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -88,136 +89,64 @@ html, body {
       color: #ffe297;
       font-size: 3em;
       text-align: center; }
-
-.Carta__Contenedor {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  flex-wrap: wrap; }
-  .Carta__Contenedor__Producto {
-    width: 10rem;
-    background-color: #000000bd;
-    height: 15.25rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    border-radius: 1rem;
-    box-shadow: 0rem -0.1rem 0.5rem 0.1rem #D6BE74;
-    overflow: hidden;
-    transition: 0.5s; }
-    .Carta__Contenedor__Producto:hover {
-      height: 25rem;
-      box-shadow: 0rem 0rem 0.7rem 0.2rem #D6BE74; }
-    .Carta__Contenedor__Producto__Contenedor {
-      border-bottom: 0.1rem solid #D6BE74;
-      width: 10rem;
-      height: 12rem; }
-      .Carta__Contenedor__Producto__Contenedor__Imagen {
-        width: 10rem; }
-    .Carta__Contenedor__Producto__Titulo {
-      color: #D6BE74;
-      text-align: center;
-      font-size: 1.4em;
-      font-weight: 100; }
-    .Carta__Contenedor__Producto__Precio {
-      color: #D6BE74;
-      text-align: center;
-      font-size: 1.4em;
-      font-weight: 100; }
-    .Carta__Contenedor__Producto__Encargar {
-      margin-bottom: 0.5rem;
-      background-color: black;
-      border: 0.1rem solid #D6BE74;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.5rem;
-      width: 8rem;
-      height: 4rem;
-      border-radius: 2rem;
-      color: whitesmoke;
-      transition: 0.4s; }
-      .Carta__Contenedor__Producto__Encargar:hover {
-        background-color: rgba(255, 255, 255, 0.692);
-        color: black; }
-    .Carta__Contenedor__Producto__Parrafo {
-      text-align: justify;
-      width: 9rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0.2rem;
-      color: white;
-      overflow-wrap: break-word; }
-
-.Carta__Contenedor__Carrusel {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  overflow: hidden; }
-  .Carta__Contenedor__Carrusel__Secciones {
-    width: 300%;
-    height: 45rem;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: flex-start; }
-    .Carta__Contenedor__Carrusel__Secciones__Titulo {
-      width: calc(100%/3);
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 1rem;
-      font-size: 2em; }
-    .Carta__Contenedor__Carrusel__Secciones__ContenedorSecciones {
-      transition: 0.5s;
-      transform: translateX(0%);
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: flex-start;
-      align-items: flex-start; }
-      .Carta__Contenedor__Carrusel__Secciones__ContenedorSecciones__Seccion {
-        width: calc(300% / 3 - 10%*3);
-        margin: 0% 5%;
-        height: 40rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 5rem;
-        background-color: rgba(0, 0, 0, 0.359);
-        border: 0.05rem solid #D6BE74;
-        border-radius: 2rem;
-        box-shadow: 0rem -0.1rem 0.5rem 0.1rem #D6BE74; }
-  .Carta__Contenedor__Carrusel__Navegacion {
-    width: 100%;
-    height: 4rem;
+  .Carta__Contenedor {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 5vw; }
+
+.Producto {
+  width: 10rem;
+  height: 18rem;
+  background-color: rgba(0, 0, 0, 0.649);
+  border-radius: 2rem;
+  border: 0.1rem solid #d6be74;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: 0.3s; }
+  .Producto:hover {
+    height: 30rem; }
+  .Producto__Contenedor {
+    width: 9.9rem;
+    height: 9.9rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom: 0.1rem solid #d6be74; }
+    .Producto__Contenedor__Imagen {
+      width: 9.9rem; }
+  .Producto__Titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d6be74;
+    font-size: 1.3em;
+    font-weight: 200;
+    margin: 1.5em 0.5rem 0.5rem 0.5rem;
+    height: 2em;
+    text-align: center; }
+  .Producto__Precio {
+    color: #d6be74;
+    font-size: 1.5em;
+    margin: 0.5em 0;
+    text-align: center; }
+  .Producto__Parrafo {
+    color: white;
+    margin: 1em; }
+  .Producto__Encargar {
+    color: white;
+    background-color: black;
+    border: 0.1rem solid #d6be74;
+    border-radius: 2rem;
+    text-align: center;
+    font-size: 1.5em;
+    width: 8rem;
+    height: 3rem;
+    display: flex;
     justify-content: center;
     align-items: center; }
-    .Carta__Contenedor__Carrusel__Navegacion__Punto {
-      background-color: aliceblue;
-      border-radius: 1rem;
-      height: 2rem;
-      width: 2rem;
-      margin: 0.5rem;
-      list-style: none; }
-
-.active {
-  background-color: #D6BE74; }
 
 @media screen and (max-width: 760px) {
   .Carta__Cabecera__Titulo {
