@@ -8,6 +8,26 @@
     }
 }
 
+@media screen and (max-width: 640px){
+    .Carta{
+        &__Contenedor{
+            &__Seccion{
+                height: 5rem;
+                &:hover{
+                    height: 59rem;
+                }
+                &__Contenedor{
+                    height: 80rem;
+                }
+                &__Titulo{
+                    font-size: 1.5em;
+                    padding: 0.2rem;
+                }
+            }
+        }
+    }
+    
+}
 
 
 
@@ -28,6 +48,47 @@
             &__Titulo{
                 font-size: 1em;
             }
+        }
+        &__Contenedor{
+            &__Seccion{
+                height: 5rem;
+                &:hover{
+                    height: 50rem;
+                }
+                &__Titulo{
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+    .Producto{
+        width: 8rem;
+        height: 14rem;
+        &__Contenedor{
+            width: 7.9rem;
+            height: 7.9rem;
+            &__Imagen{
+                width: 7.9rem;
+                height: 7.9rem;
+            }
+        }
+        &__Titulo{
+            font-size: 1em;
+        }
+        &__Precio{
+            font-size: 1em;
+        }
+        &__Parrafo{
+            font-size: 0.8em;
+        }
+        &__Encargar{
+            width: 7rem;
+            font-size: 1.2em;
+            margin-bottom: 0.5rem;
+
+        }
+        &:hover{
+            height: 23rem;
         }
     }
 }

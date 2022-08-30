@@ -1,7 +1,7 @@
 import './App.css';
-import Carrusel from './components/Carrusel';
+import Pedidos from './components/Pedido';
 import Producto from './components/Producto';
-
+import { AiFillCaretRight } from "react-icons/ai";
 function App() {
 
   const MoverCarrusel = (Posicion) =>{
@@ -21,6 +21,7 @@ function App() {
         <h1 className='Header__TituloPrincipal'>THE BIG SEVEN</h1>
         <h2 className='Header__TituloSecundario'>SUSHI</h2>
       </header>
+      <Pedidos/>
       <section className='Inicio'>
         <article className='Inicio__Contenedor'>
           <img 
@@ -40,54 +41,71 @@ function App() {
           <h1 className='Carta__Cabecera__Titulo'>CARTA DELIVERY {"&"} TAKEAWAY</h1>
         </article>
         <article className='Carta__Contenedor'>
-          <Producto
-          nombre={'NOMBRE'}
-          precio = {'PRECIO'}
-          descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
-          <Producto
-          nombre={'NOMBRE'}
-          precio = {'PRECIO'}
-          descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
-          <Producto
-          nombre={'NOMBRE'}
-          precio = {'PRECIO'}
-          descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
-          <Producto
-          nombre={'NOMBRE'}
-          precio = {'PRECIO'}
-          descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
-          <Producto
-          nombre={'NOMBRE'}
-          precio = {'PRECIO'}
-          descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
-          <Producto
-          nombre={'NOMBRE'}
-          precio = {'PRECIO'}
-          descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
-          <Producto
-          nombre={'NOMBRE'}
-          precio = {'PRECIO'}
-          descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
-          <Producto
-          nombre={'NOMBRE'}
-          precio = {'PRECIO'}
-          descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
-          <Producto
-          nombre={'NOMBRE'}
-          precio = {'PRECIO'}
-          descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
-          <Producto
-          nombre={'NOMBRE'}
-          precio = {'PRECIO'}
-          descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
-          <Producto
-          nombre={'NOMBRE'}
-          precio = {'PRECIO'}
-          descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
-          <Producto
-          nombre={'NOMBRE'}
-          precio = {'PRECIO'}
-          descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+          <section className='Carta__Contenedor__Seccion'>
+              <h2 className='Carta__Contenedor__Seccion__Titulo'>Nuestros Makis<AiFillCaretRight/></h2>
+            <div className='Carta__Contenedor__Seccion__Contenedor'>
+              <Producto
+              nombre={'NOMBRE'}
+              precio = {'PRECIO'}
+              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+              <Producto
+              nombre={'NOMBRE'}
+              precio = {'PRECIO'}
+              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+              <Producto
+              nombre={'NOMBRE'}
+              precio = {'PRECIO'}
+              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+              <Producto
+              nombre={'NOMBRE'}
+              precio = {'PRECIO'}
+              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} /> 
+            </div>  
+          </section>
+
+          <section className='Carta__Contenedor__Seccion'>
+              <h2 className='Carta__Contenedor__Seccion__Titulo'>Nuestros Uramakis<AiFillCaretRight/></h2>
+            <div className='Carta__Contenedor__Seccion__Contenedor'>
+              <Producto
+              nombre={'NOMBRE'}
+              precio = {'PRECIO'}
+              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+              <Producto
+              nombre={'NOMBRE'}
+              precio = {'PRECIO'}
+              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+              <Producto
+              nombre={'NOMBRE'}
+              precio = {'PRECIO'}
+              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+              <Producto
+              nombre={'NOMBRE'}
+              precio = {'PRECIO'}
+              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} /> 
+            </div>  
+          </section>
+
+          <section className='Carta__Contenedor__Seccion'>
+              <h2 className='Carta__Contenedor__Seccion__Titulo'>Nuestros Nigiris<AiFillCaretRight/></h2>
+            <div className='Carta__Contenedor__Seccion__Contenedor'>
+              <Producto
+              nombre={'NOMBRE'}
+              precio = {'PRECIO'}
+              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+              <Producto
+              nombre={'NOMBRE'}
+              precio = {'PRECIO'}
+              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+              <Producto
+              nombre={'NOMBRE'}
+              precio = {'PRECIO'}
+              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+              <Producto
+              nombre={'NOMBRE'}
+              precio = {'PRECIO'}
+              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} /> 
+            </div>  
+          </section>
         </article>
       </section>
 
