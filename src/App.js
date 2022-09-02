@@ -2,17 +2,30 @@ import './App.css';
 import Pedidos from './components/Pedido';
 import Producto from './components/Producto';
 import { AiFillCaretRight } from "react-icons/ai";
+import { useState } from "react";
 function App() {
+  const [producto, setProducto] = useState('');
+  const [precio, setPrecio] = useState(0)
+  const [cantidad, setCantidad] = useState(8);
+  const sumarCantidad = () => { 
+    setCantidad(cantidad + 4)
+  }
+  const restarCantidad = () => { 
+    cantidad > 4 ? setCantidad(cantidad - 4) : setCantidad(4)
 
-  const MoverCarrusel = (Posicion) =>{
-    const Carrusel = document.querySelector(".Carta__Contenedor__Opciones__Carrusel")
-    const Control = document.querySelectorAll(".Carta__Contenedor__Opciones__ControlCarrusel__Punto")
-    Control.forEach(Punto => {
-      Punto.style.backgroundColor = 'white';
-    })
-    Control[Posicion].style.backgroundColor = 'black';
-    Carrusel.style.transform = `translateX(${Posicion*-33.33}%)`
+  }
 
+
+  const [visible, setVisible] = useState(false);
+  const abrirPedido = (precio,producto) => {
+    setVisible(true)
+    setPrecio(precio)
+    setProducto(producto)
+  }
+  const cerrarPedido = () => {
+    setVisible(false)
+    setCantidad(8)
+    setProducto('')
   }
 
   return (
@@ -21,7 +34,14 @@ function App() {
         <h1 className='Header__TituloPrincipal'>THE BIG SEVEN</h1>
         <h2 className='Header__TituloSecundario'>SUSHI</h2>
       </header>
-      <Pedidos/>
+      <Pedidos
+      visible={visible}
+      cantidad = {cantidad}
+      precio = {precio}
+      producto = {producto}
+      eventCerrarPedido = {cerrarPedido}
+      eventSumarCantidad = {sumarCantidad}
+      eventRestarCantidad = {restarCantidad}/>
       <section className='Inicio'>
         <article className='Inicio__Contenedor'>
           <img 
@@ -45,65 +65,77 @@ function App() {
               <h2 className='Carta__Contenedor__Seccion__Titulo'>Nuestros Makis<AiFillCaretRight/></h2>
             <div className='Carta__Contenedor__Seccion__Contenedor'>
               <Producto
-              nombre={'NOMBRE'}
-              precio = {'PRECIO'}
-              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+              nombre={'Producto 1'}
+              precio = {700}
+              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"}
+              eventAbrirPedido = {abrirPedido}/>
               <Producto
-              nombre={'NOMBRE'}
-              precio = {'PRECIO'}
-              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+              nombre={'Producto 2'}
+              precio = {700}
+              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"}
+              eventAbrirPedido = {abrirPedido}/>
               <Producto
-              nombre={'NOMBRE'}
-              precio = {'PRECIO'}
-              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+              nombre={'Producto 3'}
+              precio = {700}
+              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"}
+              eventAbrirPedido = {abrirPedido}/>
               <Producto
-              nombre={'NOMBRE'}
-              precio = {'PRECIO'}
-              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} /> 
+              nombre={'Producto 4'}
+              precio = {700}
+              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"}
+              eventAbrirPedido = {abrirPedido}/>
             </div>  
           </section>
 
           <section className='Carta__Contenedor__Seccion'>
               <h2 className='Carta__Contenedor__Seccion__Titulo'>Nuestros Uramakis<AiFillCaretRight/></h2>
             <div className='Carta__Contenedor__Seccion__Contenedor'>
+            <Producto
+              nombre={'Producto 5'}
+              precio = {700}
+              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"}
+              eventAbrirPedido = {abrirPedido}/>
               <Producto
-              nombre={'NOMBRE'}
-              precio = {'PRECIO'}
-              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+              nombre={'Producto 6'}
+              precio = {700}
+              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"}
+              eventAbrirPedido = {abrirPedido}/>
               <Producto
-              nombre={'NOMBRE'}
-              precio = {'PRECIO'}
-              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+              nombre={'Producto 7'}
+              precio = {700}
+              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"}
+              eventAbrirPedido = {abrirPedido}/>
               <Producto
-              nombre={'NOMBRE'}
-              precio = {'PRECIO'}
-              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
-              <Producto
-              nombre={'NOMBRE'}
-              precio = {'PRECIO'}
-              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} /> 
+              nombre={'Producto 8'}
+              precio = {700}
+              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"}
+              eventAbrirPedido = {abrirPedido}/>
             </div>  
           </section>
 
           <section className='Carta__Contenedor__Seccion'>
               <h2 className='Carta__Contenedor__Seccion__Titulo'>Nuestros Nigiris<AiFillCaretRight/></h2>
             <div className='Carta__Contenedor__Seccion__Contenedor'>
+            <Producto
+              nombre={'Producto 9'}
+              precio = {700}
+              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"}
+              eventAbrirPedido = {abrirPedido}/>
               <Producto
-              nombre={'NOMBRE'}
-              precio = {'PRECIO'}
-              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+              nombre={'Producto 10'}
+              precio = {700}
+              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"}
+              eventAbrirPedido = {abrirPedido}/>
               <Producto
-              nombre={'NOMBRE'}
-              precio = {'PRECIO'}
-              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
+              nombre={'Producto 11'}
+              precio = {700}
+              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"}
+              eventAbrirPedido = {abrirPedido}/>
               <Producto
-              nombre={'NOMBRE'}
-              precio = {'PRECIO'}
-              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} />
-              <Producto
-              nombre={'NOMBRE'}
-              precio = {'PRECIO'}
-              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"} /> 
+              nombre={'Producto 12'}
+              precio = {700}
+              descripcion = {"Descripcion muy larga sobre los productos para poder adaptarlo a la web"}
+              eventAbrirPedido = {abrirPedido}/>
             </div>  
           </section>
         </article>

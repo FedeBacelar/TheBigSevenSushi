@@ -1,6 +1,6 @@
 import React from "react";
 
-function Producto({ nombre, precio, descripcion, }){
+function Producto({ nombre, precio, descripcion, eventAbrirPedido, eventAsignarPrecio}){
     return (
         <div className="Producto">
             <div className="Producto__Contenedor">
@@ -9,7 +9,7 @@ function Producto({ nombre, precio, descripcion, }){
             <h2 className="Producto__Titulo" >{nombre}</h2>
             <h2 className="Producto__Precio">${precio}</h2>
             <p className="Producto__Parrafo">{descripcion}</p>
-            <a className="Producto__Encargar" target= "_blank" href={`https://api.whatsapp.com/send?phone=541134597072&text=${"Hola,%20¿Qué%20tal%20estás?"}`}>Encargar</a>
+            <div className="Producto__Encargar" target= "_blank" onClick={() => {eventAbrirPedido(precio, nombre)}}>Encargar</div>
         </div>
     )
 }
