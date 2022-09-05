@@ -1,4 +1,40 @@
+
+@media screen and (min-width: 980px) {
+    .Pedido{
+        left: calc(50% - (49rem / 2));
+    }
+}
+
 @media screen and (max-width: 760px){
+    .Pedido{
+        height: 90vh;
+        top: 5vh;
+        justify-content: space-between;
+        &__Close{
+            height: 1.5rem;
+            width: 1.5rem;
+        }
+        &__Informacion{
+            height: auto;
+            margin: 1rem 0rem;
+            &__Contenedor{
+                height: 10rem;
+                width: 10rem;
+                &__Imagen{
+                    height: 10rem;
+                    width: 10rem;
+                }
+            }
+            &__Caracteristicas{
+                height: auto;
+                width: auto;
+                margin-left: 1rem;
+                justify-content: center;
+                gap: 2rem;
+            }
+        }
+    }
+    
     .Carta{
         &__Cabecera{
             &__Titulo{

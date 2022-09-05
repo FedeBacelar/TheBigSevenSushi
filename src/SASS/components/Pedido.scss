@@ -1,13 +1,15 @@
 .Pedido{
-    background-color: rgba(0, 0, 0, 0.767);
+    background-color: rgba(0, 0, 0, 0.9);
     display:flex;
     position: fixed;
     align-items: center;
     flex-direction: column;
     width: 80vw;
     height: 80vh;
+    max-width: 49rem;
+    max-height: 49rem;
     top: 10vh;
-    left: 10vw;
+    left: 10vh;
     border: 0.1rem solid rgb(214,190,116);
     border-radius: 1rem;
     &__Pedir{

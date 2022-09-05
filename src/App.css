@@ -181,15 +181,17 @@ html, body {
     align-items: center; }
 
 .Pedido {
-  background-color: rgba(0, 0, 0, 0.767);
+  background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   position: fixed;
   align-items: center;
   flex-direction: column;
   width: 80vw;
   height: 80vh;
+  max-width: 49rem;
+  max-height: 49rem;
   top: 10vh;
-  left: 10vw;
+  left: 10vh;
   border: 0.1rem solid #d6be74;
   border-radius: 1rem; }
   .Pedido__Pedir {
@@ -285,7 +287,33 @@ html, body {
 .invisible {
   display: none; }
 
+@media screen and (min-width: 980px) {
+  .Pedido {
+    left: calc(50% - (49rem / 2)); } }
+
 @media screen and (max-width: 760px) {
+  .Pedido {
+    height: 90vh;
+    top: 5vh;
+    justify-content: space-between; }
+    .Pedido__Close {
+      height: 1.5rem;
+      width: 1.5rem; }
+    .Pedido__Informacion {
+      height: auto;
+      margin: 1rem 0rem; }
+      .Pedido__Informacion__Contenedor {
+        height: 10rem;
+        width: 10rem; }
+        .Pedido__Informacion__Contenedor__Imagen {
+          height: 10rem;
+          width: 10rem; }
+      .Pedido__Informacion__Caracteristicas {
+        height: auto;
+        width: auto;
+        margin-left: 1rem;
+        justify-content: center;
+        gap: 2rem; }
   .Carta__Cabecera__Titulo {
     font-size: 2em; } }
 
