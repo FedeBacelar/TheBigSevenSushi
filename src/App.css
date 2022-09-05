@@ -295,8 +295,8 @@ html, body {
   .Pedido {
     top: 0;
     left: 0;
-    width: 80vw;
-    margin: 10vh 10vw;
+    width: 90vw;
+    margin: 10vh 5vw;
     height: 80vh;
     justify-content: space-between; }
     .Pedido__Close {
